@@ -296,10 +296,6 @@ def time_stats(df, city, month, day):
     print('Calculating The Most Frequent Times of Travel...\n\n')
     start_time = time.time()
 
-    # display the most common month
-    # display the most common day of week
-    # display the most common start hour
-
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
     monthly_df = df.copy()
@@ -335,10 +331,6 @@ def station_stats(df, city, month, day):
     print('Calculating The Most Popular Stations and Trips...\n\n')
     start_time = time.time()
 
-    # display most commonly used start station
-    # display most commonly used end station
-    # display most frequent combination of start station and end station trip
-
     print("Start Station occurrencies")
     print("----------------------------")  
     print(df['Start Station'].value_counts())
@@ -368,9 +360,6 @@ def trip_duration_stats(df, city, month, day):
     print('Calculating Trip Duration...\n\n')
     start_time = time.time()
 
-    # display total travel time
-    # display mean travel time
-
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
 
@@ -393,10 +382,6 @@ def user_stats(df, city, month, day):
 
     print('Calculating User Stats...\n\n')
     start_time = time.time()
-
-    # Display counts of user types
-    # Display counts of gender
-    # Display earliest, most recent, and most common year of birth
 
     df['User Count'] = df['Start Time']
     user_df = df[['User Type', 'User Count']].groupby(['User Type']).count()
