@@ -22,7 +22,8 @@ prompts, the program performs a summary analysis on the data and displays the re
 
 ### Technologies
 To run the program, you need python, pandas and numpy installed on your machine. To install the three
-in a go, you can simply install the latest version of Anaconda.
+in a go, you can simply install the latest version of Anaconda. To download Anaconda, visit
+[the Anaconda download page](https://www.anaconda.com/distribution/#download-section)
 
 ### Files used
 * bikeshare_2.py: Holds the boiler plate for the project
