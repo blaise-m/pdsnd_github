@@ -296,10 +296,6 @@ def time_stats(df, city, month, day):
     print('Calculating The Most Frequent Times of Travel...\n\n')
     start_time = time.time()
 
-    # display the most common month
-    # display the most common day of week
-    # display the most common start hour
-
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
     monthly_df = df.copy()
@@ -335,10 +331,6 @@ def station_stats(df, city, month, day):
     print('Calculating The Most Popular Stations and Trips...\n\n')
     start_time = time.time()
 
-    # display most commonly used start station
-    # display most commonly used end station
-    # display most frequent combination of start station and end station trip
-
     print("Start Station occurrencies")
     print("----------------------------")  
     print(df['Start Station'].value_counts())
@@ -368,9 +360,6 @@ def trip_duration_stats(df, city, month, day):
     print('Calculating Trip Duration...\n\n')
     start_time = time.time()
 
-    # display total travel time
-    # display mean travel time
-
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
 
@@ -393,10 +382,6 @@ def user_stats(df, city, month, day):
 
     print('Calculating User Stats...\n\n')
     start_time = time.time()
-
-    # Display counts of user types
-    # Display counts of gender
-    # Display earliest, most recent, and most common year of birth
 
     df['User Count'] = df['Start Time']
     user_df = df[['User Type', 'User Count']].groupby(['User Type']).count()
@@ -422,32 +407,7 @@ def user_stats(df, city, month, day):
 
 
 def start_analysis(df, city, month, day):
-    # print("\nWe will begin the analysis by summarizing the data to see if it contains blank entries.")
-    # print("And then clean the data to remove the blanks.")
-    # print("Below is a summary of the the data set:\n\n")
-    # print("Summary:")
-    # print("-------------------------")
-    # print(df.isnull().sum())
-    # print("-------------------------")
-    # print("\n\nThe data contains {} blank(s).".format(df.isnull().sum().sum()))
-
-    # if df.isnull().sum().sum() != 0:
-    #     df = remove_blanks(df)
-        
-    #     print("\n\nOur data is now clean and free of blank entries.")
-    #     print("Let's print the summary indicating the blank entries per column to confirm:\n\n")
-    #     print("Summary:")
-    #     print("-------------------------")
-    #     print(df.isnull().sum())
-    #     print("-------------------------")            
-
-    #     print("\n\nWe have now successfully cleaned up our data and removed the blanks.")    
-    #     print("We are now going to proceed and perform analysis on our data set.")
-    # else:
-    #     print("Since our data has no blank entries, we will proceed and perform analysis on our data set.")
-
-    # prompt("clear")
-
+    
     print("\nThe analysis is broken down into the following areas:\n")
     print("a. The statistics on the most frequent times of travel")
     print("b. The statistics on the most popular stations and trip")
